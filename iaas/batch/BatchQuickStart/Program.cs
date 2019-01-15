@@ -18,12 +18,12 @@ namespace BatchDotNetQuickstart
         
         // Batch account credentials
         private const string BatchAccountName = "laaz200batchacct";
-        private const string BatchAccountKey = "dLXy3yGl9JQocl4/7/PJpt4TdpsECQL/GwyWAGDVFwZViU21nLmJ7gX4UnCK1RVYA91yX5FUd401PC5GjZPrAw==";
+        private const string BatchAccountKey = "";
         private const string BatchAccountUrl = "https://laaz200batchacct.southcentralus.batch.azure.com";
 
         // Storage account credentials
         private const string StorageAccountName = "laaz200batchsa";
-        private const string StorageAccountKey = "TGsE5ATX7h0q5fImCQ6yAf+g8BBCznEr7v7PSR5IooSzIwGNcNFdMDeL3s5Pq+z+s9NWTYEJVA9TgesXXFETlg==";
+        private const string StorageAccountKey = "";
 
         // Batch resource settings
         private const string PoolId = "DotNetQuickstartPool";
