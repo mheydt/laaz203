@@ -1,7 +1,7 @@
-$rgName = "batchRG"
-$stgAcctName = "laaz200batchsa"
+$rgName = "batch"
+$stgAcctName = "laaz203batchsa"
 $location = "southcentralus"
-$batchAcctName = "laaz200batchacct"
+$batchAcctName = "laaz203batchacct"
 $poolName = "myPool"
 
 az group create `
@@ -24,17 +24,6 @@ az batch account login `
  -n $batchAcctName `
  -g $rgName `
  --shared-key-auth
-
-az storage account keys list `
- -g $rgName -n $stgAcctName `
- --query "[0].value" | tr -d '"'
-
-az batch account keys list `
- -g $rgName -n $batchAcctName `
- --query primary 
- 
-az batch account keys list `
- -g $rgName -n $batchAcctName 
 
 az batch pool create `
  --id mypool `
