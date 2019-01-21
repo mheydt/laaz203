@@ -7,7 +7,8 @@ az group create -n $rg `
 az aks create -g $rg `
  -n $cluster `
  --node-count 1 `
- --generate-ssh-keys
+ --generate-ssh-keys `
+ --enable-addons monitoring
 
 az aks get-credentials `
  -g $rg `
@@ -15,7 +16,7 @@ az aks get-credentials `
 
 kubectl get nodes
 
-kubectl apply -f aks/azure-vote.yaml
+kubectl apply -f azure-vote.yaml
 
 kubectl get service azure-vote-front `
  --watch
